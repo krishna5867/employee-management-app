@@ -7,9 +7,10 @@ import CreateUserCard from "@/components/CreateUserCard";
 import { useParams } from 'next/navigation'
 
 export default function Home() {
+    const dispatch = useDispatch();
     const router = useParams();
     const { id } = router;
-    const dispatch = useDispatch();
+
     const employee = useSelector((state) =>
         state.employee.employeesData.find((emp) => emp.id === id)
     );

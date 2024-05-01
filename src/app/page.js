@@ -19,18 +19,19 @@ export default function Home() {
   useEffect(() => {
     dispatch(fetchEmployeeDataAsyncThunk());
   }, [dispatch]);
+
   return (
     <div className="bg-gray-600 min-h-screen py-20 flex justify-center">
-    {isLoading ? (
-      <p className="text-white text-xl font-semibold">Loading...</p>
-    ) : (
-      <div className="flex flex-wrap justify-center gap-20">
-        {filteredEmployees.map((employee) => (
-          <Card key={employee.id} employee={employee} />
-        ))}
-      </div>
-    )}
-  </div>
+      {isLoading ? (
+        <p className="text-white text-xl font-semibold">Loading...</p>
+      ) : (
+        <div className="flex flex-wrap justify-center gap-20">
+          {filteredEmployees.map((employee) => (
+            <Card key={employee.id} employee={employee} />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 

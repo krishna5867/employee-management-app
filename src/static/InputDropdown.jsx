@@ -33,12 +33,10 @@ const InputDropdown = ({ formData, setFormData, error }) => {
 
     const handleDesignationChange = (e) => {
         const designation = e.target.value;
-        if (typeof setFormData === 'function') {
         setFormData(prevState => ({
             ...prevState,
             designation: designation
         }));
-    }
     };
 
     return (
@@ -72,10 +70,9 @@ const InputDropdown = ({ formData, setFormData, error }) => {
                     name="designation"
                     value={formData.designation}
                     className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-4 ${selectedDepartment ? '' : 'pointer-events-none'}`}
-                    // disabled={!selectedDepartment}
                     onChange={handleDesignationChange}
                 >
-                    <option value="">Select Designation</option>
+                    <option>Select Designation</option>
                     {selectedDepartment &&
                         designationOptions.map((designation, index) => (
                             <option key={index} value={designation}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import SearchBox from './SearchBox'
-import { TrashIcon, UserIcon } from './assets'
+import { UserIcon } from './assets'
 import Link from 'next/link'
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className='bg-black w-full py-4 px-4'>
             <div className='flex justify-between items-center'>
                 <Link href="/">
-                    <Image src="https://www.weblly.in/images/logo.svg" className="" width={100} height={100} alt="Logo" />
+                    <Image src="https://www.weblly.in/images/logo.svg" width={100} height={100} alt="Logo" />
                 </Link>
                 <div className='w-1/3'>
                     <SearchBox />

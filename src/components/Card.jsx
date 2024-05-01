@@ -1,7 +1,7 @@
 import React from 'react'
 import { AtsignIcon, BriefcaseIcon, BulbIcon, CalenderIcon, DollerIcon, EditPencilIcon, PhoneIcon, TrashIcon } from './assets'
 import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { deleteEmployeeAsyncThunk } from '@/store/employeeSlice';
 
 const Card = ({ employee }) => {
